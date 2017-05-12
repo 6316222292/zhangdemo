@@ -1,0 +1,30 @@
+Git is a version control system.
+Git is free software.
+张成海的第一次修改内容
+学习内容进度：
+1.创建库 
+	第一步：
+		mkdir demo //创建文件夹
+		cd learngit//进入文件夹
+		pwd //查看文件夹路径
+	
+	第二部：
+		git init//创建库
+		git add xxx.t//将文件添加到库
+		git commit -m "XXX" //提交到库 -m 描述提交的内容
+		git status //查看库当前的状态
+		git diff //查看库修改的内容
+		git log //查看提交的日志  --pretty=oneline
+		版本回退
+			git reset --hard HEAD^  //回退到上一个版本
+			HEAD //表示当前的版本  上一个版本就是HEAD^  上上一个版本就是HEAD^^   上100个版本HEAD~100
+			git reset --hard 3628164 //回退到指定版本  commit id 3628164... 版本号没必要写全
+			git reflog //查看你的每一次命令   可以获取commit id
+		撤销修改
+			git checkout -- xxx.txt //丢弃文件在工作区的修改全部撤销,总之，就是让这个文件回到最近一次git commit或git add时的状态。
+			git reset HEAD xxx.txt  //git reset命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本。
+		删除文件：
+			m test.txt //删除文件  注意：确实要从版本库中删除该文件，那就用命令git rm删掉，并且git commit
+		
+		 
+
